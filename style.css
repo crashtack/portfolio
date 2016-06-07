@@ -14,8 +14,16 @@ p {
 
 .drop {
   /*float: right;*/
-  padding: .5em;
-  border: 1em;
+  padding: 2px;
+  border: solid black 2px;
+  display: none;
+}
+
+.icon {
+  border: solid black 2px;
+  display: block;
+  position: absolute;
+  top: 100%;
 }
 
 .text {
@@ -30,11 +38,28 @@ p {
   position:absolute;
   top: 0.2;
   right: 0;
-  line-height:45px;
   padding:0px 15px 0px 15px;
-  z-index:10000000000000;
+
 }
 
 .info {
+  display: none;
+  padding: 0;
   list-style: none;
+  clear: both;
+}
+
+.info{
+
+  display: block;
+}
+
+
+
+.icon:hover {
+  background: red;
+}
+
+.icon:hover ul {
+  display: block;
 }
