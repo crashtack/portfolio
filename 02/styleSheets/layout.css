@@ -1,0 +1,29 @@
+/** {
+  border: 3px black solid;
+
+}*/
+header {
+  display: inline-block;
+}
+
+.menu {
+  border: solid black 2px;
+  border-radius: 5px;
+  list-style: none;
+  z-index: 1;
+  background-color: #0072bc;
+  display: none;
+}
+
+p {
+  padding: 1%;
+  border: 2px black solid;
+  display: block;
+  box-sizing: border-box;
+}
+
+.text {
+  overflow: scroll;
+  max-height: 3%;
+  max-width: 60%;
+}
