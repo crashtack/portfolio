@@ -1,0 +1,65 @@
+body {
+  background-color: grey;
+}
+
+img {
+  max-width: 25%;
+  float: left;
+}
+
+p {
+  border: solid black 2px;
+  margin-top: .5%;
+}
+
+.drop {
+  /*float: right;*/
+  padding: 2px;
+  border: solid black 2px;
+  display: none;
+}
+
+.icon {
+  border: solid black 2px;
+  display: block;
+  position: absolute;
+  top: 100%;
+}
+
+.text {
+  display: block;
+  height: 10%;
+}
+
+.hamburger {
+  /*float: right;*/
+  display: block;
+  background:none;
+  position:absolute;
+  top: 0.2;
+  right: 0;
+  padding:0px 15px 0px 15px;
+
+}
+
+.info {
+  display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+.info{
+
+  display: block;
+}
+
+
+
+.icon:hover {
+  background: red;
+}
+
+.icon:hover ul {
+  display: block;
+}
