@@ -1,3 +1,9 @@
+var about = [];
+
+function Assembly(line) {
+  this.project = line.project;
+}
+
 jQuery('.dropdown-toggle').click(function(){
   jQuery(this).next('.dropDown').toggle();
 });
