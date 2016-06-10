@@ -1,16 +1,40 @@
-var about = [];
+var product = [];
 
-function Assembly(line) {
-  this.project = line.project;
+function Assembly(opts) {
+  this.project = 'project';
+  this.date = opts.date;
+  this.category = opts.category;
+  this.contribution = opts.contribution;
+  this.text = opts.text;
 }
 
-$('.dropdown-toggle').click(function(){
-  jQuery(this).next('.dropDown').toggle();
+Assembly.prototype.toHtml = function() {
+  var $newInterest = $('production.template').clone();
+  $newInterest.removeClass('template');
+  // $newInterest.attr('data-category', this.category);
+  $newInterest.find('.infoLine').html(this.date);
+  $newInterest.find('.infoLine').html(this.contribution);
+  $newInterest.find('.infoLine').html(this.project);
+  $newInterest.find('.product-text').html(this.text);
+  return $newInterest;
+
+};
+
+localData.forEach(function(ele) {
+  product.push(new Assembly(ele));
 });
 
-jQuery(document).click(function(e) {
+product.forEach(function(a){
+  $('#products').append(a.toHtml());
+});
+
+$('.dropdown-toggle').click(function(){
+  $(this).next('.dropDown').toggle();
+});
+
+$(document).click(function(e) {
   var target = e.target;
-  if (!jQuery(target).is('.dropdown-toggle') && !jQuery(target).parents().is('.dropdown-toggle')) {
-    jQuery('.dropDown').hide();
+  if (!$(target).is('.dropdown-toggle') && !$(target).parents().is('.dropdown-toggle')) {
+    $('.dropDown').hide();
   }
 });
